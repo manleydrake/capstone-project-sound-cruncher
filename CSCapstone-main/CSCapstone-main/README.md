@@ -2,6 +2,8 @@
 
 Michael 3-6
 
+!! In line 20 of flaskapp.py, app.config["IMAGE UPLOADS"] = "____" you must change the path to match your computer (navigate to the Images folder then pwd, that is the path)
+
 flaskapp.py is the executable file
 /DCASE will prompt user to select a file then submit
 Will then redirect to /results which will be where we display results
