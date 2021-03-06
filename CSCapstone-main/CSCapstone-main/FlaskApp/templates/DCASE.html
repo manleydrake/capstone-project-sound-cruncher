@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+	 Filename: DCASE.html
+
+	Sources: Julian Nash at pythonise.com
+			Specifically, https://www.youtube.com/watch?v=6WruncSoCdI 
+			This is what I used to learn how to upload and save files
+
+
+
+			Lab 18 from previous CS178 class, which had these references as well:
+			https://www.sqlite.org/about.html 
+			https://pythonspot.com/flask-web-app-with-python/ 
+			https://www.datasciencebytes.com/bytes/2015/02/28/using-flask-to-answer-sql-queries/
+
+
+	-->
+
+<html>
+
+<style>
+header {
+	background-color: black;
+	align-content: center;
+}
+
+body {
+	background-color: rgb(0, 204, 153); //(0, 204, 153)
+	outline: black;
+}
+input {
+	color: black;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+</style>
+
+<head>
+	<!--<link href="DCASE.css" rel="stylesheet" />-->
+</head>
+
+<body>
+
+<p>Click on the "Choose File" button to upload a file:</p>
+
+<p>This is a test!!</p>
+
+<form action="/results" method="POST" enctype="multipart/form-data">
+  <!--
+  <input type="file" id="myFile" name="filename" color="green" value="user-file">
+  <input type="submit" value="Upload"-->
+<div class="form-group">
+  <label>Select file</label>
+  <div class="custom-file">
+  	<input type="file" class="custom-file-input" name="sound" id="file">
+  	<label class="custom-file-label" for="file">Select file...</label>
+  </div>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+</body>
+</html>
