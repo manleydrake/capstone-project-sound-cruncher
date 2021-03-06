@@ -17,7 +17,7 @@ def DCASE():
 	return render_template('DCASE.html')
 
 
-app.config["IMAGE UPLOADS"] = "/Users/michaelscott/desktop/cs178/flaskapp/images"
+app.config["IMAGE UPLOADS"] = "/Users/michaelscott/desktop/capstone-project-team-6-sound-cruncher/CSCapstone-main/cscapstone-main/flaskapp/images"
 
 
 @app.route('/results', methods=["GET", "POST"])
