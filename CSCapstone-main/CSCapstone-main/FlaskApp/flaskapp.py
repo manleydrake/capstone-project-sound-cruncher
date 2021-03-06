@@ -1,20 +1,34 @@
 from flask import Flask
+from flask import render_template, request, redirect
+import os
 app = Flask(__name__)
 
-@app.route('/')
-def hello():
-	return '<h1>Hello from Flask!</h1>'
 
-@app.route('/about')
-def about():
-	return '<h2>An about page!</h2>'
-
-@app.route('/DCASE')
+@app.route('/DCASE', methods=["GET", "POST"])
 def DCASE():
-	return '<header> <img src="dcase2021_challenge.png" alt="DCASE 2021 Challenge" id="logoImage" class="center" /> </header> <body> <p>Click on the "Choose File" button to upload a file:</p> <p>This is a test!</p> <form action="test.html" method="post"> <input type="file" id="myFile" name="filename" color="green" value="user-file"> <input type="submit" value="Upload"> </form> </body>'
 
-@app.route('/results')
+	# if request.method == "POST":
+	# 	if request.files:
+	# 		file_one = request.files["sound"]
+	# 		file_one.save(os.path.join(app.config["IMAGE UPLOADS"], file_one.filename)) 
+	# 		print("it worked")
+	# 		return redirect(request.url)
+
+	return render_template('DCASE.html')
+
+
+app.config["IMAGE UPLOADS"] = "/Users/michaelscott/desktop/cs178/flaskapp/images"
+
+
+@app.route('/results', methods=["GET", "POST"])
 def results():
+	
+	if request.method == "POST":
+		if request.files:
+			file_one = request.files["sound"]
+			file_one.save(os.path.join(app.config["IMAGE UPLOADS"], file_one.filename)) 
+			print("it worked")
+			return redirect(request.url)
 	return 'Results'
 
 
@@ -23,6 +37,8 @@ from flask import render_template
 @app.route("/hello/<username>/")
 def hello_user(username):
 	return render_template('layout.html', name=username)
+
+	
 
 
 # these two lines of code should always be the last in the file
