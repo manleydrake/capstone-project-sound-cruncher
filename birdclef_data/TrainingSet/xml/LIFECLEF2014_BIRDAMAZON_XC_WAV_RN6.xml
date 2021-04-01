@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>6</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN6.wav</FileName>
+  <ClassId>hwqenp</ClassId>
+  <Date>2007-10-06</Date>
+  <Time>14:20</Time>
+  <Locality>Horto Florestal, Cantareira, Sao Paulo city, Sao Paulo state</Locality>
+  <Latitude>-23.46</Latitude>
+  <Longitude>-46.638</Longitude>
+  <Elevation>830</Elevation>
+  <Author>Daniel Lane</Author>
+  <AuthorID>WOEAFQRMUD</AuthorID>
+  <Content>call</Content>
+  <Comments>Response to playback from male 2-3m off ground in understory of forest.</Comments>
+  <Quality>1</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Thamnophilidae</Family>
+  <Genus>Dysithamnus</Genus>
+  <Species>mentalis</Species>
+  <Sub-species />
+  <VernacularNames>Plain Antvireo</VernacularNames>
+</Audio>

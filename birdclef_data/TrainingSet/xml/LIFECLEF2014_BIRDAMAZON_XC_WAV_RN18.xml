@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>18</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN18.wav</FileName>
+  <ClassId>onzvdf</ClassId>
+  <Date>2013-06-23</Date>
+  <Time>06:30</Time>
+  <Locality>Xapuri, Acre</Locality>
+  <Latitude>-10.7427</Latitude>
+  <Longitude>-68.2818</Longitude>
+  <Elevation>220</Elevation>
+  <Author>Marcos A. Melo</Author>
+  <AuthorID>MRGDYNJGUJ</AuthorID>
+  <Content>song</Content>
+  <Comments>bird-seen:yesplayback-used:no</Comments>
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies>Crypturellus undulatus,Myrmeciza atrothorax,Cantorchilus leucotis</BackgroundSpecies>
+  <Order>Passeriformes</Order>
+  <Family>Furnariidae</Family>
+  <Genus>Furnarius</Genus>
+  <Species>leucopus</Species>
+  <Sub-species />
+  <VernacularNames>Pale-legged Hornero</VernacularNames>
+</Audio>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>9</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN9.wav</FileName>
+  <ClassId>uphahj</ClassId>
+  <Date>2011-05-16</Date>
+  <Time>17:00</Time>
+  <Locality>Panga Research Station, Minas Gerais</Locality>
+  <Latitude>-19.182381</Latitude>
+  <Longitude>-48.393574</Longitude>
+  <Elevation>700</Elevation>
+  <Author>Bob Planque</Author>
+  <AuthorID>OH38YHKJBS</AuthorID>
+  <Content>call</Content>
+  <Comments>up in a tree.</Comments>
+  <Quality>1</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies>Pitangus sulphuratus</BackgroundSpecies>
+  <Order>Accipitriformes</Order>
+  <Family>Accipitridae</Family>
+  <Genus>Rupornis</Genus>
+  <Species>magnirostris</Species>
+  <Sub-species />
+  <VernacularNames>Roadside Hawk</VernacularNames>
+</Audio>
