@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>11</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN11.wav</FileName>
+  <ClassId>lddsyh</ClassId>
+  <Date>2000-09-05</Date>
+  <Time>16:52</Time>
+  <Locality>Cristalino Jungle Lodge, MT</Locality>
+  <Latitude>-9.5981</Latitude>
+  <Longitude>-55.932</Longitude>
+  <Elevation>50</Elevation>
+  <Author>Jeremy Minns</Author>
+  <AuthorID>DGVLLRYDXS</AuthorID>
+  <Content>Call</Content>
+  <Comments>Terra firme forest.Natural calls of female.</Comments>
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Thamnophilidae</Family>
+  <Genus>Thamnophilus</Genus>
+  <Species>schistaceus</Species>
+  <Sub-species>schistaceus</Sub-species>
+  <VernacularNames>Plain-winged Antshrike</VernacularNames>
+</Audio>

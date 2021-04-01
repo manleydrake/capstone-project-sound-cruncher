@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>19</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN19.wav</FileName>
+  <ClassId>pdkcpg</ClassId>
+  <Date>2012-04-05</Date>
+  <Time>8:49</Time>
+  <Locality>riacho da Onça-Pão de Açúcar-Alagoas-Brasil</Locality>
+  <Latitude>-9.725</Latitude>
+  <Longitude>-37.45</Longitude>
+  <Elevation>300</Elevation>
+  <Author>pedroteia</Author>
+  <AuthorID>BZVNDWLRSQ</AuthorID>
+  <Content>song</Content>
+  <Comments>dois individuos cantavam .</Comments>
+  <Quality>1</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Thamnophilidae</Family>
+  <Genus>Myrmorchilus</Genus>
+  <Species>strigilatus</Species>
+  <Sub-species />
+  <VernacularNames>Stripe-backed Antbird</VernacularNames>
+</Audio>

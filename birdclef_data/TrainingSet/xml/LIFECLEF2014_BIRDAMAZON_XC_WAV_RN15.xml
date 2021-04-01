@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>15</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN15.wav</FileName>
+  <ClassId>uiqpgc</ClassId>
+  <Date>2005-12-20</Date>
+  <Time>07:11</Time>
+  <Locality>07017 Praia do Laranjal - Pelotas, Rio Grande do Sul</Locality>
+  <Latitude>-31.12887</Latitude>
+  <Longitude>-52.5737</Longitude>
+  <Elevation>0</Elevation>
+  <Author>Fernando Jacobs</Author>
+  <AuthorID>MHHPJBCUXC</AuthorID>
+  <Content>call</Content>
+  <Comments />
+  <Quality>0</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Turdidae</Family>
+  <Genus>Turdus</Genus>
+  <Species>albicollis</Species>
+  <Sub-species />
+  <VernacularNames>White-necked Thrush</VernacularNames>
+</Audio>
