@@ -1,6 +1,7 @@
-# Trainig scripts for deep convolutional neural network based audio classification in Keras
+# Training scripts for deep convolutional neural network based audio classification in Keras
 
 The following scripts were created for the BirdCLEF 2016 competition by Bálint Czeba and Bálint Pál Tóth.
+Further modified by Brian Dannenmueller and the Drake Capstone Spring 2021 SoundCruncher / Group 6. 
 
 *The LifeCLEF bird identification challenge provides a largescale
 testbed for the system-oriented evaluation of bird species identifi-
@@ -42,7 +43,7 @@ sudo apt-get install python-tk
 sudo pip install scipy
 sudo pip install matplotlib
 sudo pip install sklearn
-sudo pip install tensorflow-gpu
+sudo pip install tensorflow-gpu #tensorflow for cpu -BD
 sudo pip install keras
 ```
 The code is tested under Python 2.7. with TensorFlow (GPU) 1.0.0a0 and Keras 1.1.1. backend, NVidia Titan X 12GB GPU.
