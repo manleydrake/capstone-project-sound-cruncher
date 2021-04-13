@@ -1,0 +1,234 @@
+This is the error log for running the deep learning algorithm. The first section is the debugging done in the “audio” Anaconda environment, which has the latest packages for keras, tensorflow, python, etc. After some tribulation, I determined that it would be best to set up a new environment precisely as recommended in the README provided with the software. Even though it is older and no longer supported, it worked at that time with those particular package version. This environment was named “birdsong”. 
+
+—————————————————————
+Error log:  w/ audio environment: 
+—————————————————————
+
+Removed mkdir, cd birdclef_data, wget and unp commands from doall.sh.
+Now it starts on preprocess step
+
+Added parenthesis to some print commands
+
+Errors/Warnings:
+
+sox WARN rate: rate clipped 823 samples; decrease volume?
+
+Could be caused by natural audio distortion. Listening to the specific file, I noticed that there was indeed a great deal of noise — sounds like a guitar amp’s hum. Nothing can be done about this. However, other files had slight (1 sample) clipping, so I added the -v 0.99 option to sox for reducing volume. 
+
+------------------------------
+preprocess/resample_wavs_to_16k.sh: line 13: cd: preprocess: No such file or directory
+------------------------------
+
+Not sure what to make of this one yet. 
+------------------------------
+File "loadData.py", line 81, in readXMLs
+    df		= df.append(pd.DataFrame(xmltodict.parse(''.join(metadata))['Audio'], index=[0])).reset_index(drop=True)
+TypeError: sequence item 0: expected str instance, bytes found
+------------------------------
+Difference between Python 2 and 3:  “”.join is used for strings, but this program is reading a byte file object. Add the letter b before like so: b””.join
+Update made to line 81
+------------------------------
+File "loadData.py", line 395, in <module>
+    (X, y, fn)	= processNMostCommon(999, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TRAIN_OUT_XMLPICKLEFILE, todirrootpath=PATH_TRAIN_OUT_HDF5) # processes the most common 999 species (so the whole dataset)
+  File "loadData.py", line 348, in processNMostCommon
+    dsetClassId = f.create_dataset('ClassId', (0,1), maxshape=(None,1), dtype=h5py.special_dtype(vlen=unicode))
+NameError: name 'unicode' is not defined
+------------------------------
+Python 3 renamed the unicode datatype to str and the str type to bytes
+------------------------------
+File "trainModel.py", line 100, in <module>
+    execfile(modelPath)
+NameError: name 'execfile' is not defined
+------------------------------
+execfile syntax changed. Instead of execfile(modelPath), using 
+exec(open(modelPath).read())
+
+Downgraded from Python 3.9 to Python 3.6.8 since Keras isn’t supported yet in newer Python versions. Installed Keras and other dependencies into the “audio” Anaconda environment. 
+------------------------------
+File "loadData.py", line 395, in <module>
+    (X, y, fn)	= processNMostCommon(999, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TRAIN_OUT_XMLPICKLEFILE, todirrootpath=PATH_TRAIN_OUT_HDF5) # processes the most common 999 species (so the whole dataset)
+  File "loadData.py", line 382, in processNMostCommon
+    dsety[pre_len:pre_len+add_len,:] = y
+TypeError: Can't broadcast (68, 16) -> (68, 999)
+------------------------------
+Simply change so that it processes the most common 16 species instead (change the “999” to 16). This concludes updates to loadData.py and xmltodict.py
+------------------------------
+trainModel.py:45: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(input_shape=(1, 200, 3..., activation="relu", kernel_size=(16, 16), filters=96, strides=(6, 6), padding="valid", kernel_initializer="glorot_normal")`
+------------------------------
+ValueError: Negative dimension size caused by subtracting 16 from 1 for 'conv2d_1/convolution' (op: 'Conv2D') with input shapes: [?,1,200,310], [16,16,310,96].
+------------------------------
+Keras 2 API is different from original Keras, with which this was coded. Made updates accordingly.
+input_shape was reformatted to be channel last instead of channel first. Also substituted arguments:
+
+Subsample —> Strides
+Border_mode =—> padding
+nb_row/nb_col —>  kernel_size = (16,16)
+nb_filter —> filters
+Init —> kernel_initializer
+------------------------------
+trainModel.py:128: UserWarning: The `nb_epoch` argument in `fit` has been renamed `epochs`
+------------------------------
+Changed nb_epochs —> epochs
+------------------------------
+  File "trainModel.py", line 128, in <module>
+AttributeError: 'HDF5Matrix' object has no attribute 'ndim'
+------------------------------
+Not sure what to do about this one, but perhaps fixing other issues will resolve it. 
+------------------------------
+H5pyDeprecationWarning: The default file mode will change to 'r' (read-only) in h5py 3.0. To suppress this warning, pass the mode you need to h5py.File(), or set the global default h5.get_config().default_file_mode, or set the environment variable H5PY_DEFAULT_READONLY=1. Available modes are: 'r', 'r+', 'w', 'w-'/'x'
+------------------------------
+This error arises from the io_utils_mod.py.
+
+
+——————————————————————
+Errors: w/ birdsong environment: 
+——————————————————————
+
+loadData.py:38: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'MacOSX' by the following code:
+  File "loadData.py", line 30, in <module>
+    import matplotlib.pyplot as plt
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/matplotlib/pyplot.py", line 71, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/matplotlib/backends/__init__.py", line 16, in <module>
+    line for line in traceback.format_stack()
+------------------------------
+Moved the matplotlib.pyplot import statement to lines 38, after matplolib.use(‘Egg’)
+------------------------------
+Traceback (most recent call last):
+  File "loadData.py", line 395, in <module>
+    (X, y, fn)	= processNMostCommon(999, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TRAIN_OUT_XMLPICKLEFILE, todirrootpath=PATH_TRAIN_OUT_HDF5) # processes the most common 999 species (so the whole dataset)
+  File "loadData.py", line 382, in processNMostCommon
+    dsety[pre_len:pre_len+add_len,:] = y
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/h5py/_hl/dataset.py", line 707, in __setitem__
+    for fspace in selection.broadcast(mshape):
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/h5py/_hl/selections.py", line 299, in broadcast
+    raise TypeError("Can't broadcast %s -> %s" % (target_shape, self.mshape))
+TypeError: Can't broadcast (69, 16) -> (69, 999)
+------------------------------
+Changed number of classes in line 395 to 16 instead of original 999
+------------------------------
+Failed to load the native TensorFlow runtime.
+------------------------------
+Added "image_dim_ordering": "th", 
+to the .keras/keras.json configuration file using nano. This did not fix the error. Some messages from the stack trace:
+------------------------------
+from tensorflow.python import pywrap_tensorflow
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/tensorflow/python/pywrap_tensorflow.py", line 52, in <module>
+    raise ImportError(msg)
+
+ImportError: dlopen(/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so, 10): Library not loaded: @rpath/libcublas.8.0.dylib
+------------------------------
+I discovered that the solution was to install regular Tensorflow instead of the Tensorflow-gpu that was listed in the Readme requirements. 
+------------------------------
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py", line 825, in batch_flatten
+    x = tf.reshape(x, tf.pack([-1, prod(shape(x)[1:])]))
+AttributeError: 'module' object has no attribute 'pack'
+------------------------------
+In Tensorflow version 1.0.0, the .pack attribute was changed to .stack, which I verified through the version documentation on Github.  Simply went into my anaconda library and edited the tensorflow_backend.py directly to fix this. 
+------------------------------
+Traceback (most recent call last):
+  File "trainModel.py", line 128, in <module>
+    fitting_result	= model.fit(X_train, y_train, nb_epoch = nb_epochs, batch_size = batchSize, callbacks = [earlyStopping, mapcallback, checkpointer_val_acc, checkpointer_val_loss,  checkpointer_val_map], shuffle = 'batch', validation_data = (X_validation, y_validation))
+….
+File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/keras/callbacks.py", line 31, in _set_model
+    callback._set_model(model)
+AttributeError: 'MapCallback' object has no attribute '_set_model'
+------------------------------
+A solution was found here: https://github.com/keras-rl/keras-rl/issues/67
+Change the _set_model to set_model (remove leading underscore) on line 31. Did the same for _set_params
+Didn’t work. New error message: 
+
+ File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/keras/engine/training.py", line 804, in _fit_loop
+    callbacks.set_model(callback_model)
+AttributeError: 'CallbackList' object has no attribute 'set_model'
+
+------------------------------
+Corrected MapCallback.py, which had an attribute set_params and set_model changed to _set_params and _set_model
+------------------------------
+FailedPreconditionError (see above for traceback): Attempting to use uninitialized value batchnormalization_1_running_mean/biased
+	 [[Node: batchnormalization_1_running_mean/biased/read = Identity[T=DT_FLOAT, _class=["loc:@batchnormalization_1_running_mean"], _device="/job:localhost/replica:0/task:0/cpu:0"](batchnormalization_1_running_mean/biased)]]
+------------------------------
+I believe that somewhere in the program, GPU mode is still turned on. 
+Commented out line 55: config.gpu_options.allow_growth=True
+even though that was not the issue, just to be safe. 
+
+Stack trace also led me to : 
+------------------------------
+File "./model-AlexNet.py", line 47, in <module>
+    model.add(BatchNormalization())
+------------------------------
+Apparently our model is doing something with BatchNormalization, causing the error. 
+I found a solution at https://fantashit.com/error-when-using-batchnormalization-layer-in-gpu-mode/
+Added the following code before fitting the model: 
+keras.backend.get_session().run(tf.initialize_all_variables())
+
+
+That fixed the issue! However, each epoch was taking about 10 seconds and there were 20,000 epochs. It would take an estimated 50 hours to run on my CPU. I aborted and changed the number of epochs to 5. Since there was practically no data, all that really matters is getting it to finish running, no matter how bad the output. 
+
+------------------------------
+Traceback (most recent call last):
+  File "trainModel.py", line 149, in <module>
+    map		= average_precision_score( y_test.data[y_test.start: y_test.end], y_result, average='micro')
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/sklearn/metrics/ranking.py", line 241, in average_precision_score
+    average, sample_weight=sample_weight)
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/sklearn/metrics/base.py", line 80, in _average_binary_score
+    y_true = check_array(y_true)
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/sklearn/utils/validation.py", line 582, in check_array
+    context))
+ValueError: Found array with 0 sample(s) (shape=(0, 999)) while a minimum of 1 is required.
+------------------------------
+The issue appeared to lie with y_true within the sklearn.metrics.ranking module. It was passed into average_precision_score as y_test.data[y_test.start: y_test.end.]
+I figured out that the issue was with the hdfpath, which was had a file name for the 999 class version of the program. Renamed from '../birdclef_data/data_top999_nozero.hdf5' to '../birdclef_data/data_top16_nozero.hdf5'
+
+I received a new warning:
+------------------------------
+/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/keras/callbacks.py:286: RuntimeWarning: Can save best model only with val_acc available, skipping.
+  'skipping.' % (self.monitor), RuntimeWarning)
+------------------------------
+Not too worried about it yet. Will deal with it when an error is produced. 
+Program was stopped by this error: 
+------------------------------
+Traceback (most recent call last):
+  File "trainModel.py", line 150, in <module>
+    map		= average_precision_score( y_test.data[y_test.start: y_test.end], y_result, average='micro')
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/sklearn/metrics/ranking.py", line 241, in average_precision_score
+    average, sample_weight=sample_weight)
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/sklearn/metrics/base.py", line 80, in _average_binary_score
+    y_true = check_array(y_true)
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/sklearn/utils/validation.py", line 582, in check_array
+    context))
+ValueError: Found array with 0 sample(s) (shape=(0, 16)) while a minimum of 1 is required.
+------------------------------
+Similar to the old one. y_test still has nothing in it. The test split was set to 1%. I adjusted it to 20%. 
+That fixed it. 
+------------------------------
+Traceback (most recent call last):
+  File "trainModel.py", line 165, in <module>
+    model.load_weights(bestModelFilePath_val_acc)
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/keras/engine/topology.py", line 2494, in load_weights
+    f = h5py.File(filepath, mode='r')
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/h5py/_hl/files.py", line 394, in __init__
+    swmr=swmr)
+  File "/Users/briandannenmueller/opt/anaconda3/envs/birdsong/lib/python2.7/site-packages/h5py/_hl/files.py", line 170, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 85, in h5py.h5f.open
+IOError: Unable to open file (unable to open file: name = './modelWeights/best_val_acc_16.hdf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+------------------------------
+This error involves val_acc which is almost certainly related to the Runtime error from before. 
+This may have something to do with the dearth of validation data. Increasing validation split to 25%
+
+That did not fix the issue either. I think it may be due to there being only one example for each class. That is a problem to solve on the next sprint. Commented out the bit of code causing this error. 
+
+trainModel.py now runs! Can’t log the model yet, though. 
+
+In order to generate spectrograms, un-commented the code for this at the bottom of loadData.py
+
