@@ -6,7 +6,7 @@ import tablib
 app = Flask(__name__)
 
 
-@app.route("/DCASE", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def DCASE():
 
     return render_template("DCASE.html")
