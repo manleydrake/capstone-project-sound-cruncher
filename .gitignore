@@ -15,3 +15,4 @@ birdclef_data/test/wav_16khz/
 birdclef_data/test/xml_data.pickle
 figures/
 train/modelWeights/
+MLProgram/birdclef_data/
