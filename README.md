@@ -45,6 +45,10 @@ sudo pip install matplotlib
 sudo pip install sklearn
 sudo pip install tensorflow-gpu #tensorflow for cpu -BD
 sudo pip install keras
+
+
+pip install tablib
+pip install "tablib[html]
 ```
 The code is tested under Python 2.7. with TensorFlow (GPU) 1.0.0a0 and Keras 1.1.1. backend, NVidia Titan X 12GB GPU.
 
