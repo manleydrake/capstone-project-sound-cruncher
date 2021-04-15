@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>12</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN12.wav</FileName>
+  <ClassId>cuwfkj</ClassId>
+  <Date>2006-01-09</Date>
+  <Time>12:00</Time>
+  <Locality>Barbalha, Chapado do Araripe, south of Ceará State.</Locality>
+  <Latitude>-7.3834</Latitude>
+  <Longitude>-39.3501</Longitude>
+  <Elevation>920</Elevation>
+  <Author>Nick Athanas</Author>
+  <AuthorID>XRABICUARW</AuthorID>
+  <Content>call</Content>
+  <Comments>Response to playback of XC11588. img:http://www.antpitta.com/images/photos/antbirds/CaatingaAntwren.jpg</Comments>
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies>Myrmorchilus strigilatus</BackgroundSpecies>
+  <Order>Passeriformes</Order>
+  <Family>Thamnophilidae</Family>
+  <Genus>Herpsilochmus</Genus>
+  <Species>sellowi</Species>
+  <Sub-species />
+  <VernacularNames>Caatinga Antwren</VernacularNames>
+</Audio>

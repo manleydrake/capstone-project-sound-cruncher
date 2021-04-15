@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>33</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN33.wav</FileName>
+  <ClassId>aufwve</ClassId>
+  <Date>2008-04-16</Date>
+  <Time>19:00</Time>
+  <Locality>Sítio do Cervo, Miracatú-SP</Locality>
+  <Latitude>-24.38333</Latitude>
+  <Longitude>-47.7</Longitude>
+  <Elevation>50</Elevation>
+  <Author>Tim Hirsch</Author>
+  <AuthorID>BMVCNRFNOY</AuthorID>
+  <Content>Call</Content>
+  <Comments>ID on advice, but views welcome in view of earlier discussion. Recorded from office window - Windows email note heard between two calls!</Comments>
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Strigiformes</Order>
+  <Family>Strigidae</Family>
+  <Genus>Megascops</Genus>
+  <Species>atricapilla</Species>
+  <Sub-species />
+  <VernacularNames>Black-capped Screech Owl</VernacularNames>
+</Audio>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>48</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN48.wav</FileName>
+  <ClassId>cchgxy</ClassId>
+  <Date>2006-10-08</Date>
+  <Time>10:00</Time>
+  <Locality>Fazenda caetes, nr Vargem Alta, Esperito Santo</Locality>
+  <Latitude>-20.4573</Latitude>
+  <Longitude>-40.992</Longitude>
+  <Elevation>1150</Elevation>
+  <Author>Frank Lambert</Author>
+  <AuthorID>YTUXOCTUEM</AuthorID>
+  <Content>call</Content>
+  <Comments>pair sheltering from rain</Comments>
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Hirundinidae</Family>
+  <Genus>Notiochelidon</Genus>
+  <Species>cyanoleuca</Species>
+  <Sub-species />
+  <VernacularNames>Blue-and-white Swallow</VernacularNames>
+</Audio>

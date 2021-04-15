@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>68</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN68.wav</FileName>
+  <ClassId>uuvfxv</ClassId>
+  <Date>2009-09-25</Date>
+  <Time>10:25</Time>
+  <Locality>Itu, São Paulo</Locality>
+  <Latitude>-23.270681</Latitude>
+  <Longitude>-47.298889</Longitude>
+  <Elevation>590</Elevation>
+  <Author>Marcos Melo</Author>
+  <AuthorID>MRGDYNJGUJ</AuthorID>
+  <Content>call, song</Content>
+  <Comments />
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Parulidae</Family>
+  <Genus>Myiothlypis</Genus>
+  <Species>flaveola</Species>
+  <Sub-species />
+  <VernacularNames>Flavescent Warbler</VernacularNames>
+</Audio>

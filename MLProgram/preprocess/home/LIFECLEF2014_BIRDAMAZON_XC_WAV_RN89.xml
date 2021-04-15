@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>89</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN89.wav</FileName>
+  <ClassId>ewytof</ClassId>
+  <Date>2008-03-22</Date>
+  <Time>pm</Time>
+  <Locality>Parque Estadual Mata dos Godoy, Londrina, Parana</Locality>
+  <Latitude>-23.4501</Latitude>
+  <Longitude>-51.2334</Longitude>
+  <Elevation>650</Elevation>
+  <Author>Eduardo Patrial</Author>
+  <AuthorID>QEFRRVCRRP</AuthorID>
+  <Content>song</Content>
+  <Comments />
+  <Quality>0</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Thamnophilidae</Family>
+  <Genus>Mackenziaena</Genus>
+  <Species>severa</Species>
+  <Sub-species />
+  <VernacularNames>Tufted Antshrike</VernacularNames>
+</Audio>

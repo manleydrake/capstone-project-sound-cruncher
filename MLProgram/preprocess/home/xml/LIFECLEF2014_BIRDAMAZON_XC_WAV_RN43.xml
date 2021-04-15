@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>43</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN43.wav</FileName>
+  <ClassId>fcojdk</ClassId>
+  <Date>2013-06-23</Date>
+  <Time>07:00</Time>
+  <Locality>Araponga, Minas Gerais</Locality>
+  <Latitude>-20.6665</Latitude>
+  <Longitude>-42.5222</Longitude>
+  <Elevation>950</Elevation>
+  <Author>Noé Eiterer</Author>
+  <AuthorID>TWSKITNQOV</AuthorID>
+  <Content>song</Content>
+  <Comments>bird-seen:yesplayback-used:no</Comments>
+  <Quality>1</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Cotingidae</Family>
+  <Genus>Procnias</Genus>
+  <Species>nudicollis</Species>
+  <Sub-species />
+  <VernacularNames>Bare-throated Bellbird</VernacularNames>
+</Audio>

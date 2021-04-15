@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>24</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN24.wav</FileName>
+  <ClassId>myyugr</ClassId>
+  <Date>2005-05-12</Date>
+  <Time>8:30am</Time>
+  <Locality>Bonito,Mato Grosso do Sul State</Locality>
+  <Latitude>-21.05</Latitude>
+  <Longitude>-56.563</Longitude>
+  <Elevation>290</Elevation>
+  <Author>Antonio Silveira</Author>
+  <AuthorID>NBJQSQJRYH</AuthorID>
+  <Content>song</Content>
+  <Comments />
+  <Quality>1</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Tyrannidae</Family>
+  <Genus>Machetornis</Genus>
+  <Species>rixosa</Species>
+  <Sub-species />
+  <VernacularNames>Cattle Tyrant</VernacularNames>
+</Audio>

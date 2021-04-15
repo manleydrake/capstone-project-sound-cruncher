@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>38</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN38.wav</FileName>
+  <ClassId>firddw</ClassId>
+  <Date>2009-08-01</Date>
+  <Time>7:34</Time>
+  <Locality>Campus UNEB, Alagoinhas, Bahia</Locality>
+  <Latitude>-12.1795</Latitude>
+  <Longitude>-38.4087</Longitude>
+  <Elevation>100</Elevation>
+  <Author>Sidnei S. dos Santos</Author>
+  <AuthorID>BHODJXTHGQ</AuthorID>
+  <Content>Song</Content>
+  <Comments />
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Thamnophilidae</Family>
+  <Genus>Thamnophilus</Genus>
+  <Species>ambiguus</Species>
+  <Sub-species />
+  <VernacularNames>Sooretama Slaty Antshrike</VernacularNames>
+</Audio>
