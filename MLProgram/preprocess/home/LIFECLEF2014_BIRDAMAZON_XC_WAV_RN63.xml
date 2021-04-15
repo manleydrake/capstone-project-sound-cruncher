@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>63</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN63.wav</FileName>
+  <ClassId>uvsyop</ClassId>
+  <Date>1998-06-27</Date>
+  <Time>07:00</Time>
+  <Locality>Itatiaia National Park. Rio Maromba valley</Locality>
+  <Latitude>-22.4001</Latitude>
+  <Longitude>-44.6667</Longitude>
+  <Elevation>1125</Elevation>
+  <Author>Jeremy Minns</Author>
+  <AuthorID>DGVLLRYDXS</AuthorID>
+  <Content>flight call</Content>
+  <Comments>Três Picos trail. Secondary montane forest. Mobbing a  Sharp-shinned Hawk perched at the top of a tall eucalyptus.</Comments>
+  <Quality>0</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies>Cyclarhis gujanensis,Accipiter erythronemius</BackgroundSpecies>
+  <Order>Apodiformes</Order>
+  <Family>Trochilidae</Family>
+  <Genus>Thalurania</Genus>
+  <Species>glaucopis</Species>
+  <Sub-species />
+  <VernacularNames>Violet-capped Woodnymph</VernacularNames>
+</Audio>

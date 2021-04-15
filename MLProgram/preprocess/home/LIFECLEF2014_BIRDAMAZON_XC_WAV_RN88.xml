@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>88</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN88.wav</FileName>
+  <ClassId>ywuvnu</ClassId>
+  <Date>1999-09-17</Date>
+  <Time>17:35</Time>
+  <Locality>Reserva Extrativista Alto Juruá. Pedra Pintada</Locality>
+  <Latitude>-9.3828</Latitude>
+  <Longitude>-72.7106</Longitude>
+  <Elevation>230</Elevation>
+  <Author>Jeremy Minns</Author>
+  <AuthorID>DGVLLRYDXS</AuthorID>
+  <Content>Song</Content>
+  <Comments>Várzea forest.</Comments>
+  <Quality>1</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies>Attila spadiceus,Xiphorhynchus guttatus</BackgroundSpecies>
+  <Order>Tinamiformes</Order>
+  <Family>Tinamidae</Family>
+  <Genus>Crypturellus</Genus>
+  <Species>cinereus</Species>
+  <Sub-species />
+  <VernacularNames>Cinereous Tinamou</VernacularNames>
+</Audio>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>64</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN64.wav</FileName>
+  <ClassId>qrhwnu</ClassId>
+  <Date>2008-11-13</Date>
+  <Time>10:00</Time>
+  <Locality>Bairro do Guaraú, Peruíbe, São Paulo State</Locality>
+  <Latitude>-24.3167</Latitude>
+  <Longitude>-47.01</Longitude>
+  <Elevation>5</Elevation>
+  <Author>Antonio Silveira</Author>
+  <AuthorID>NBJQSQJRYH</AuthorID>
+  <Content>call, song</Content>
+  <Comments>Several R.vitellinus singing and call on higth tree, and several Cyanocorax caeruleus (Azure Jay) making alarm calls and attacking them perharps of the nests near. Channel-billed Toucan  like to eat eggs, is one of the predator of the Atlantic rainforest.bird-seen:yesplayback-used:no</Comments>
+  <Quality>1</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Piciformes</Order>
+  <Family>Ramphastidae</Family>
+  <Genus>Ramphastos</Genus>
+  <Species>vitellinus</Species>
+  <Sub-species />
+  <VernacularNames>Channel-billed Toucan</VernacularNames>
+</Audio>

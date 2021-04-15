@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>83</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN83.wav</FileName>
+  <ClassId>jttuic</ClassId>
+  <Date>2010-12-19</Date>
+  <Time>19:13</Time>
+  <Locality>Sento Sé</Locality>
+  <Latitude>-9.7439</Latitude>
+  <Longitude>-41.0909</Longitude>
+  <Elevation>?</Elevation>
+  <Author>Sidnei S. dos Santos</Author>
+  <AuthorID>BHODJXTHGQ</AuthorID>
+  <Content>Song</Content>
+  <Comments>After playback</Comments>
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Caprimulgiformes</Order>
+  <Family>Nyctibiidae</Family>
+  <Genus>Nyctibius</Genus>
+  <Species>griseus</Species>
+  <Sub-species />
+  <VernacularNames>Common Potoo</VernacularNames>
+</Audio>

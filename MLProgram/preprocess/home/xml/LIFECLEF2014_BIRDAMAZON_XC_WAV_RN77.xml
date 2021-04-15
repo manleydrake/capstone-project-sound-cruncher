@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>77</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN77.wav</FileName>
+  <ClassId>kuggpr</ClassId>
+  <Date>2012-08-01</Date>
+  <Time>07:30</Time>
+  <Locality>Microregion of Caraguatatuba, São Paulo</Locality>
+  <Latitude>-23.5759</Latitude>
+  <Longitude>-45.4471</Longitude>
+  <Elevation>800</Elevation>
+  <Author>Rodrigo Dela Rosa de Souza</Author>
+  <AuthorID>VGXDJMKETZ</AuthorID>
+  <Content>male, song</Content>
+  <Comments>bird-seen:yesplayback-used:yes</Comments>
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Thamnophilidae</Family>
+  <Genus>Batara</Genus>
+  <Species>cinerea</Species>
+  <Sub-species />
+  <VernacularNames>Giant Antshrike</VernacularNames>
+</Audio>

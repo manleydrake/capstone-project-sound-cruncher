@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>46</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN46.wav</FileName>
+  <ClassId>vyxqzu</ClassId>
+  <Date>2006-09-30</Date>
+  <Time>09:00</Time>
+  <Locality>Caraça Park, Minais Gereis</Locality>
+  <Latitude>NULL</Latitude>
+  <Longitude>NULL</Longitude>
+  <Elevation>?</Elevation>
+  <Author>Frank Lambert</Author>
+  <AuthorID>YTUXOCTUEM</AuthorID>
+  <Content>song?</Content>
+  <Comments />
+  <Quality>2</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Thamnophilidae</Family>
+  <Genus>Formicivora</Genus>
+  <Species>serrana</Species>
+  <Sub-species />
+  <VernacularNames>Serra Antwren</VernacularNames>
+</Audio>

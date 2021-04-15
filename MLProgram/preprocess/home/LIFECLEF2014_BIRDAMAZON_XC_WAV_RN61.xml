@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>61</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN61.wav</FileName>
+  <ClassId>yilzpe</ClassId>
+  <Date>2012-09-01</Date>
+  <Time>?</Time>
+  <Locality>Parque Estadual Lago Azul, campo mourao, paraná</Locality>
+  <Latitude>-24.331</Latitude>
+  <Longitude>-52.387</Longitude>
+  <Elevation>630</Elevation>
+  <Author>Luiz C.Silva</Author>
+  <AuthorID>ORPKXJRFDZ</AuthorID>
+  <Content>chamados/calls</Content>
+  <Comments>avistada/seen</Comments>
+  <Quality>1</Quality>
+  <Year>BirdCLEF2014</Year>
+  <BackgroundSpecies />
+  <Order>Passeriformes</Order>
+  <Family>Tyrannidae</Family>
+  <Genus>Leptopogon</Genus>
+  <Species>amaurocephalus</Species>
+  <Sub-species />
+  <VernacularNames>Sepia-capped Flycatcher</VernacularNames>
+</Audio>
