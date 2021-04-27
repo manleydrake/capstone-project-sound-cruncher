@@ -1,5 +1,4 @@
 #!/bin/bash
-mkdir -p birdclef_data
 preprocess/resample_wavs_to_16k.sh birdclef_data/TrainingSet/wav
 preprocess/resample_wavs_to_16k.sh birdclef_data/test/wav2015
 cd preprocess

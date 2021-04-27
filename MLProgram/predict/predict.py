@@ -41,10 +41,10 @@ import loadData
 PATH_TEST_IN_16KWAVS            = '../birdclef_data/test/wav_16khz'
 PATH_TEST_IN_XMLPICKLEFILE      = '../birdclef_data/test/xml_data.pickle'
 modelPath			= '../train/model-AlexNet.py'
-modelWeightsPath		= '../train/modelWeights/best_val_map_999.hdf5' 
-labelBinarizerPath 		= "../birdclef_data/labelBinarizer_top999.pickle"
+modelWeightsPath		= '../train/modelWeights/best_val_map_10.hdf5' 
+labelBinarizerPath 		= "../birdclef_data/labelBinarizer_top10.pickle"
 
-output_dim			= 999
+output_dim			= 10
 scalerFilePath = None
 
 if __name__ == "__main__":
@@ -110,25 +110,31 @@ ap=[]
 i=0
 
 # writeing predictions
-resultColumns = lb.inverse_transform(np.diag([1 for i in range(999)]))
+resultColumns = lb.inverse_transform(np.diag([1 for i in range(10)]))
 resultsFileName = "test_2015_{}_{}.csv".format(os.path.split(modelPath)[-1], datetime.datetime.now().strftime('%Y-%m-%d-%H-%M'))
 
 # running test with all the data
 for i in range(int(df.shape[0]*0.0),df.shape[0]):
     print ('{}/{}'.format(i, df.shape[0]))
     result = runModelOnWavByPath(model, os.path.join(PATH_TEST_IN_16KWAVS, df.FileName[i]))    
+    print("Result: " + str(result))
 
     result_avg = np.mean(result, axis=0)
     result_avg = result_avg/np.sum(result_avg)
+    print("Result Avg: " + str(result_avg))
     
     singleResultDF = pd.DataFrame([result_avg], columns = resultColumns)
     singleResultDF['MediaId'] = df.MediaId[i]
     with open(resultsFileName, "a") as myfile:
         for row in singleResultDF.iterrows():
-            for k,v in row[1].iterkv():
+            # changes iterkv to iteritems due to depracation
+            for k,v in row[1].iteritems():
                 if (k is not 'MediaId'):
                     resultLine = "{};{};{:.16f}\n".format(row[1].MediaId, k, v)
                     myfile.write(resultLine)
     
 elapsed = time.time()-startTime;
 print("Execution time: {0} s".format(elapsed))
+
+##TODO:
+# Output of ML Program should be a csv providing the predicted class of bird. 

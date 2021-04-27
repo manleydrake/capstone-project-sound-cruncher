@@ -392,7 +392,7 @@ print("Reading XML files and generating pickle file")
 df_xml		= readXMLs(PATH_TRAIN_IN_XMLFILES) # read XML files with meta-data
 df_xml.to_pickle(PATH_TRAIN_OUT_XMLPICKLEFILE) # save the loaded meta-data into a pickle file with all the informatio
 print("Process wav files and save them into HDF5")
-(X, y, fn)	= processNMostCommon(16, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TRAIN_OUT_XMLPICKLEFILE, todirrootpath=PATH_TRAIN_OUT_HDF5) # processes the most common 999 species (so the whole dataset)
+(X, y, fn)	= processNMostCommon(10, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TRAIN_OUT_XMLPICKLEFILE, todirrootpath=PATH_TRAIN_OUT_HDF5) # processes the most common 999 species (so the whole dataset)
 # print("Generating scaler")
 # scaler, data	= generateScaler(5000, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TRAIN_OUT_XMLPICKLEFILE, todirrootpath=PATH_TRAIN_OUT_HDF5) # calculates and saves the standard scaler based on 5000 wav files
 
@@ -404,7 +404,7 @@ df_xml.to_pickle(PATH_TEST_OUT_XMLPICKLEFILE) # save the loaded meta-data into a
 
 
 # The following code is for plotting some data for inspection
-
+counter = 0
 for data_item in loadWavs("../birdclef_data/TrainingSet/"):
     print("Processing {}".format(data_item[1]['FileName']))
     tempSpec, tempSpecFiltered = audioToFilteredSpectrogram(data_item[0])
@@ -418,4 +418,8 @@ for data_item in loadWavs("../birdclef_data/TrainingSet/"):
     plt.pcolormesh(tempSpecFiltered, cmap=plt.cm.binary)
     fig.savefig('../figures/' + data_item[1]['FileName'][:-4] + '.png', transparent = True)
     plt.close(fig)
+    counter += 1
+    # counter limits the number of figures produced
+    if counter > 10:
+        break
 
