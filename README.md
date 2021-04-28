@@ -46,11 +46,19 @@ sudo pip install sklearn
 sudo pip install tensorflow-gpu #tensorflow for cpu -BD
 sudo pip install keras
 
+In addition, make sure that the following modules have the same versions on the EC2: 
+Module		Version
+python		2.7.16
+scipy		1.2.1
+pandas		0.24.2
+numpy		1.16.5
+pickleshare	0.7.5
+h5py		2.9.0
+sklearn		0.20.3
+matplotlib	2.2.3	
 
-pip install tablib
-pip install "tablib[html]
 ```
-The code is tested under Python 2.7. with TensorFlow (GPU) 1.0.0a0 and Keras 1.1.1. backend, NVidia Titan X 12GB GPU.
+The code is tested under TensorFlow (GPU) 1.0.0a0 and Keras 1.1.1. backend, NVidia Titan X 12GB GPU.
 
 If you use TensorFlow as a backend with Keras 1.x you should set
 ```
