@@ -1,0 +1,10 @@
+Great Kiskadee,Pitangus,sulphuratus - https://upload.wikimedia.org/wikipedia/commons/8/8c/Pitangus_sulphuratus_3.jpg 
+Guianan Warbling Antbird, Hypocnemis, cantator - https://cdn.download.ams.birds.cornell.edu/api/v1/asset/179883581/1800 
+Palm Tanager,Thraupis,palmarum - https://cdn.download.ams.birds.cornell.edu/api/v1/asset/41391251/1800 
+Plain Antvireo,Dysithamnus,mentalis - https://cdn.download.ams.birds.cornell.edu/api/v1/asset/238821021/900 
+Planalto Tyrannulet,Phyllomyias,fasciatus - https://cdn.download.ams.birds.cornell.edu/api/v1/asset/95496391/900
+Rufous-capped Motmot,Baryphthengus,ruficapillus - https://cdn.download.ams.birds.cornell.edu/api/v1/asset/79036751/1800
+Rufous-sided Crake,Laterallus,melanophaius -https://cdn.download.ams.birds.cornell.edu/api/v1/asset/320044501/1800 
+Striped Cuckoo,Tapera,naevia - https://cdn.download.ams.birds.cornell.edu/api/v1/asset/321337621/1800 
+White-throated toucanet,Aulacorhynchus,albivitta - https://cdn.download.ams.birds.cornell.edu/api/v1/asset/44419191/1800
+Xingu Scale-backed Antbird,Willisornis,vidua - https://cdn.download.ams.birds.cornell.edu/api/v1/asset/182286871/1800
