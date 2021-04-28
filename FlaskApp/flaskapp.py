@@ -39,8 +39,11 @@ def results():
             else:
                 value = line.split(',')
 
-        html_str = html_str + key[0] + '</th><th>' + key[1] + '</th> <th>' + key[2] + '</th> </tr>'
+        html_str = html_str + key[0] + '</th><th>' + key[1] + '</th> <th>' + 'Species' + '</th> </tr>'
         html_str = html_str + ' <tr> <td>' + value[0] + '</td> <td>' + value[1] + '</td> <td>' + value[2] + '</td> </tr> </table>'
+        print(value[0])
+        if value[0] == "Great Kiskadee":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/179883581/1800" width="850" height="650">'
 
     return html_str
 
