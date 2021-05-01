@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template, request, redirect
 import os
 
+
 app = Flask(__name__)
 
 
@@ -10,14 +11,18 @@ def DCASE():
     return render_template("DCASE.html")
 
 
-app.config["IMAGE UPLOADS"] = "/Users/michael/desktop/cscapstone-main/flaskapp/soundsample"
+app.config["IMAGE UPLOADS"] = "/Users/michael/desktop/capstone-project-team-6-sound-cruncher/flaskapp/soundsample"
 
 
 @app.route("/loading", methods=["GET", "POST"])
 def loading():
     if request.method == "POST":
+        
         print("run prediction files here")
-        os.system("./write.sh")
+        #os.system("/capstone-project-team-6-sound-cruncher/mlprogram/./predict.sh")
+
+        os.system("python write_results.py")#writes to result.csv
+
         if request.files:
             file_one = request.files["sound"]
             file_one.save(os.path.join(app.config["IMAGE UPLOADS"], file_one.filename))
@@ -39,11 +44,40 @@ def results():
             else:
                 value = line.split(',')
 
-        html_str = html_str + key[0] + '</th><th>' + key[1] + '</th> <th>' + 'Species' + '</th> </tr>'
+        html_str = html_str + 'Name</th><th>Genus</th> <th> Species </th> </tr>'
         html_str = html_str + ' <tr> <td>' + value[0] + '</td> <td>' + value[1] + '</td> <td>' + value[2] + '</td> </tr> </table>'
-        print(value[0])
+        
+
         if value[0] == "Great Kiskadee":
+            html_str = html_str + '<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Pitangus_sulphuratus_3.jpg" width="850" height="650">'
+
+        if value[0] == "Guianan Warbling Antbird":
             html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/179883581/1800" width="850" height="650">'
+
+        if value[0] == "Palm Tanager":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/41391251/1800" width="850" height="650">'
+
+        if value[0] == "Plain Antvireo":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/238821021/900" width="850" height="650">'
+
+        if value[0] == "Planalto Tyrannulet":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/95496391/900" width="850" height="650">'
+
+        if value[0] == "Rufous-capped Motmot":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/79036751/1800" width="850" height="650">'
+
+        if value[0] == "Rufous-sided Crake":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/320044501/1800" width="850" height="650">'
+
+        if value[0] == "Striped Cuckoo":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/321337621/1800" width="850" height="650">'
+
+        if value[0] == "White-throated toucanet":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/44419191/1800" width="850" height="650">'
+
+        if value[0] == "Xingu Scale-backed Antbird":
+            html_str = html_str + '<img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/182286871/1800" width="850" height="650">'
+
 
     return html_str
 
