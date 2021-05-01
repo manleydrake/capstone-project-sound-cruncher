@@ -2,14 +2,21 @@
 
 !!Need to modify paths in following lines:
 
-flaskapp.py
+flaskapp.py-
+
 14
+
 22?
 
-write_results.py
+
+write_results.py-
+
 4 (this will have to be changed to whatever our prediction output file is)
+
 15
+
 26
+
 _____________________________________________________________________
 
 Changes:
