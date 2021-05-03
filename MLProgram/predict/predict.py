@@ -138,3 +138,4 @@ print("Execution time: {0} s".format(elapsed))
 
 ##TODO:
 # Output of ML Program should be a csv providing the predicted class of bird. 
+# Make it run without xml files
