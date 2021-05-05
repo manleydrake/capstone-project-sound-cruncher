@@ -90,17 +90,11 @@ For training you have to simply run
 ```
 ./doall.sh
 ```
-Be aware that this will download all the data (>50 GB) from http://otmedia.lirmm.fr/LifeCLEF/BirdCLEF2016/ to 
-```
-birdclef_data
-```
-directory, unpack it and resample to 16 kHz and preprocess it into HDF5 files. You need cca. 280 GB of free space for the whole process. If you would like to put the data to somewhere else, please modify the doall.sh, preprocess/loadData.py and train/trainModel.py scripts.
-
-The download process, preprocessing and training takes 4-5 days on an i7 CPU + Titan X GPU.
+Although the original program gets data using the doall.sh, we modifying the script so that it would not longer pull the BirdCLEF data, since it requires over 200 GB to download and unpack. Instead, we downloaded the full data set to a 1 TB flashdrive, then subsetted it by placing files species_select.py and species.csv in the MLProgram/birdclef_data/TrainingSet folder and ran it from there. This program is scalable, so you can pick any number of classes from the original 999 and copy them out of the original dataset. With this improvement, we were able to train our model overnight without the use of a graphics card by using only 10 classes of birds. 
 
 # Prediction
 
-After the preprocessing and training is do simpy run the following script to make predictions on test data:
+After the preprocessing and training is do simply run the following script to make predictions on test data:
 
 ```
 ./predict.sh
