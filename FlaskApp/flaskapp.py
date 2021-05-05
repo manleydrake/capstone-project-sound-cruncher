@@ -44,8 +44,9 @@ def results():
             else:
                 value = line.split(',')
 
-        html_str = html_str + 'Name</th><th>Genus</th> <th> Species </th> </tr>'
-        html_str = html_str + ' <tr> <td>' + value[0] + '</td> <td>' + value[1] + '</td> <td>' + value[2] + '</td> </tr> </table>'
+        html_str = html_str + 'Name</th><th>Genus</th> <th> Species </th> <th>Accuracy</tr>'
+        val = str(float(value[3]) * 100)
+        html_str = html_str + ' <tr> <td>' + value[0] + '</td> <td>' + value[1] + '</td> <td>' + value[2] + '</td> <td>' + val + '</td> </tr> </table>'
         
 
         if value[0] == "Great Kiskadee":

@@ -1,12 +1,18 @@
 ##Returns 6 character code
 def extract():
 	with open('/Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/test_2015_model-AlexNet.py_2021-04-26-18-06.csv') as f:
-	        
+	        max = 0
+	        ret_value = ''
 	        f1 = f.readlines()	        
 	        for line in f1:
 	        	array = line.split(';')
-	        	if array[2] == '1.0000000000000000\n':
-	        		return array[1]
+	        	val = array[2].strip('\n')
+	        	val = float(val)
+	        	if val >= max:
+	        		ret_value = array[1]
+	        		ret2 = val
+	        		max = val
+	        return [ret_value,ret2]
 
 ##Returns name,genus,species of bird in an array
 def translate(code):
@@ -23,9 +29,9 @@ def translate(code):
 def transfer():
 	results = open("/Users/michael/desktop/capstone-project-team-6-sound-cruncher/flaskapp/result.csv", "w+")
 	lines = results.readlines()[1:]
-	results.write("Name,Genus,Species\n")
-	array = translate(extract())
-	results.write(array[0] + ',' +  array[1] + ',' + array[2])
+	results.write("Name,Genus,Species,Accuracy\n")
+	array = translate(extract()[0])
+	results.write(array[0] + ',' +  array[1] + ',' + array[2] + ',' + str(extract()[1]))
 	results.close()	
 	return 0
 
