@@ -19,7 +19,7 @@ def loading():
     if request.method == "POST":
         
         print("run prediction files here")
-        #os.system("python /Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/predict.py")
+        #os.system("python2 /Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/predict.py")
 
         os.system("python write_results.py")#writes to result.csv
 
@@ -38,7 +38,7 @@ def results():
         value = []
         html_str = '<style> table, th, td{ border :1px solid black; align-content:center; text-align:center; } body { background-color: rgb(0, 204, 153); outline: black; }caption{ font-size:24; } </style> <table style="width:100%"> <caption>Prediction</caption> <tr> <th>'
         for line in f1:
-            if 'Column' in line:
+            if 'Name' in line:
                 key = (line.split(','))
 
             else:
