@@ -19,7 +19,7 @@ def loading():
     if request.method == "POST":
         
         print("run prediction files here")
-        #os.system("/capstone-project-team-6-sound-cruncher/mlprogram/./predict.sh")
+        #os.system("python /Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/predict.py")
 
         os.system("python write_results.py")#writes to result.csv
 
