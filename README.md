@@ -1,7 +1,7 @@
 # Training scripts for deep convolutional neural network based audio classification in Keras
 
 The following scripts were created for the BirdCLEF 2016 competition by Bálint Czeba and Bálint Pál Tóth.
-Further modified by Brian Dannenmueller and the Drake Capstone Spring 2021 SoundCruncher / Group 6. 
+Further modified by the Drake Capstone Spring 2021 SoundCruncher / Group 6. Members: Samuel Fluhr, Michael Scott, and Brian Dannenmueller. 
 
 *The LifeCLEF bird identification challenge provides a largescale
 testbed for the system-oriented evaluation of bird species identifi-
