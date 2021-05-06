@@ -38,7 +38,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 plt.ioff()
 
-# traiing data related paths
+# training data related paths
 PATH_TRAIN_IN_16KWAVS		= '../birdclef_data/TrainingSet/wav_16khz' # the location where the 16kHz resampled wavs are located
 PATH_TRAIN_IN_XMLFILES		= '../birdclef_data/TrainingSet/xml/' # the path where the XML meta-data files are located
 PATH_TRAIN_OUT_XMLPICKLEFILE	= '../birdclef_data/TrainingSet/xml_data.pickle' # the location and filename where the XML meta-data will be saved
@@ -404,6 +404,7 @@ df_xml.to_pickle(PATH_TEST_OUT_XMLPICKLEFILE) # save the loaded meta-data into a
 
 
 # The following code is for plotting some data for inspection
+'''
 counter = 0
 for data_item in loadWavs("../birdclef_data/TrainingSet/"):
     print("Processing {}".format(data_item[1]['FileName']))
@@ -422,4 +423,5 @@ for data_item in loadWavs("../birdclef_data/TrainingSet/"):
     # counter limits the number of figures produced
     if counter > 10:
         break
+'''
 
