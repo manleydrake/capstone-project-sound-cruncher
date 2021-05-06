@@ -12,7 +12,7 @@ def DCASE():
     return render_template("DCASE.html")
 
 
-app.config["IMAGE UPLOADS"] = "/Users/michael/desktop/capstone-project-team-6-sound-cruncher/flaskapp/soundsample"
+app.config["IMAGE UPLOADS"] = "../MLProgram/birdclef_data/test/demo"
 
 
 @app.route("/loading", methods=["GET", "POST"])
@@ -20,9 +20,8 @@ def loading():
     if request.method == "POST":
         
         print("run prediction files here")
-        subprocess.call("bash -i /Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict.sh", shell=True)
-        #os.system("python2 /Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/predict.py")
-
+        subprocess.call("bash -i ../MLProgram/predict.sh", shell=True)
+        print(os.getcwd())
         os.system("python write_results.py")#writes to result.csv
 
         if request.files:

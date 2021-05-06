@@ -1,8 +1,7 @@
 #!/bin/bash
-ORIGINALDIR=$(dirname $0)
-DIR=$1
-cd $DIR
-mkdir ../wav_16khz
+cd ..
+pwd
+cd birdclef_data/test/demo
 FILES=*
 for f in $FILES
 do

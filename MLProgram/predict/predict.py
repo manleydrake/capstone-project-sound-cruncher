@@ -38,7 +38,7 @@ sys.path.append('../preprocess/')
 import loadData
 
 # prediction related paths, should be consistent with /preprocess/loadData.py and /train/trainModel.py
-PATH_TEST_IN_16KWAVS            = '../birdclef_data/test/wav_16khz/LIFECLEF2014_BIRDAMAZON_XC_WAV_RN434.wav'
+PATH_TEST_IN_16KWAVS            = '../birdclef_data/test/wav_16khz/LIFECLEF2014_BIRDAMAZON_XC_WAV_RN972.wav'
 PATH_TEST_IN_XMLPICKLEFILE      = '../birdclef_data/test/xml_data.pickle'
 modelPath			= '../train/model-BirdClef.py'
 modelWeightsPath		= '../train/modelWeights/best_val_map_10.hdf5' 

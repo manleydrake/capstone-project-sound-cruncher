@@ -1,6 +1,6 @@
 ##Returns 6 character code
 def extract():
-	with open('/Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/test.csv') as f:
+	with open('../MLProgram/predict/test.csv') as f:
 	        max = 0
 	        ret_value = ''
 	        f1 = f.readlines()	        
@@ -16,7 +16,7 @@ def extract():
 
 ##Returns name,genus,species of bird in an array
 def translate(code):
-	f = open ('/Users/michael/desktop/capstone-project-team-6-sound-cruncher/flaskapp/classes.csv', 'r')
+	f = open ('classes.csv', 'r')
 	f1 = f.readlines()
 	for line in f1:
 		arr = line.split(',')
@@ -27,7 +27,7 @@ def translate(code):
 
 ##writes to result.csv
 def transfer():
-	results = open("/Users/michael/desktop/capstone-project-team-6-sound-cruncher/flaskapp/result.csv", "w+")
+	results = open("result.csv", "w+")
 	lines = results.readlines()[1:]
 	results.write("Name,Genus,Species,Accuracy\n")
 	array = translate(extract()[0])

@@ -7,4 +7,5 @@ MLProgram/train/modelWeights/
 MLProgram/birdclef_data/TrainingSet/
 MLProgram/birdclef_data/test/
 MLProgram/predict.sh
-
+__pycache__/
+sub.py
