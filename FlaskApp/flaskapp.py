@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template, request, redirect
 import os
+import subprocess
 
 
 app = Flask(__name__)
@@ -19,6 +20,7 @@ def loading():
     if request.method == "POST":
         
         print("run prediction files here")
+        subprocess.call("bash -i /Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict.sh", shell=True)
         #os.system("python2 /Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/predict.py")
 
         os.system("python write_results.py")#writes to result.csv
