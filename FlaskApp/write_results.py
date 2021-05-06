@@ -1,6 +1,6 @@
 ##Returns 6 character code
 def extract():
-	with open('/Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/test_2015_model-AlexNet.py_2021-04-26-18-06.csv') as f:
+	with open('/Users/michael/desktop/capstone-project-team-6-sound-cruncher/mlprogram/predict/test.csv') as f:
 	        max = 0
 	        ret_value = ''
 	        f1 = f.readlines()	        

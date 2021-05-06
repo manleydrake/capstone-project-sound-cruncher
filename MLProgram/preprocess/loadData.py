@@ -45,8 +45,10 @@ PATH_TRAIN_OUT_XMLPICKLEFILE	= '../birdclef_data/TrainingSet/xml_data.pickle' # 
 PATH_TRAIN_OUT_HDF5		= '../birdclef_data/' # the path where preprocessed data will be saved in HDF5 format
 
 # same as above just with test data, the wav related data will be generating in train/predict.py
+PATH_TEST_IN_16KWAVS       = '../birdclef_data/test/wav_16khz'
 PATH_TEST_IN_XMLFILES		= '../birdclef_data/test/xml2015' 
 PATH_TEST_OUT_XMLPICKLEFILE	= '../birdclef_data/test/xml_data.pickle'
+PATH_TEST_OUT_HDF5     = '../birdclef_data/'
 
 # this parameter is used for preprocessing
 # the number comes from the following equation: np.floor(sampling_frequency/(FFT_length-FFT_overlap))*num_of_seconds
@@ -333,7 +335,8 @@ def generateScaler(numberOfFiles=100, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpickl
 #	X,y,fn			for debuging purposes
 #
 
-def processNMostCommon(N=3, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TRAIN_OUT_XMLPICKLEFILE, todirrootpath=PATH_TRAIN_OUT_HDF5):
+# skip for demo
+def processNMostCommon(N=3, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TEST_OUT_XMLPICKLEFILE, todirrootpath=PATH_TEST_OUT_HDF5):
     global spectrogramWindowLength
 
     if not os.path.exists(todirrootpath):
@@ -363,6 +366,7 @@ def processNMostCommon(N=3, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH
     df_mc.reset_index(drop=True, inplace=True)
     (lb,binaryLabels) = getOneHotClassId(df_mc) # generate one-hot labels
     pickle.dump(lb, open(os.path.join(todirrootpath,"labelBinarizer_top{}.pickle".format(N)), 'wb'))
+
 
     # process the selected files of top N classes and save the data into HDF5
     fileRanges = np.hstack((np.arange(0, len(df_mc), 30), len(df_mc)))
@@ -399,9 +403,9 @@ print("Process wav files and save them into HDF5")
 
 print("== Generating test data ==")
 print("Reading XML files and generating pickle file")
-df_xml		= readXMLs(PATH_TEST_IN_XMLFILES) # read XML files with meta-data
-df_xml.to_pickle(PATH_TEST_OUT_XMLPICKLEFILE) # save the loaded meta-data into a pickle file with all the informatio
-
+#df_xml		= readXMLs(PATH_TEST_IN_XMLFILES) # read XML files with meta-data
+#df_xml.to_pickle(PATH_TEST_OUT_XMLPICKLEFILE) # save the loaded meta-data into a pickle file with all the informatio
+#(X, y, fn)  = processNMostCommon(10, wavdirpath=PATH_TRAIN_IN_16KWAVS, xmlpicklepath=PATH_TEST_OUT_XMLPICKLEFILE, todirrootpath=PATH_TEST_OUT_HDF5) 
 
 
 # The following code is for plotting some data for inspection

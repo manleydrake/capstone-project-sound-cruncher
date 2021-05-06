@@ -10,4 +10,4 @@ do
   # take action on each file. $f store current file name
   sox ./$f -r 16000 ../wav_16khz/$f
 done
-cd $ORIGINALDIR
+

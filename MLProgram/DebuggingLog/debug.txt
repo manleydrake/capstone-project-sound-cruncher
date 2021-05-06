@@ -232,3 +232,30 @@ trainModel.py now runs! Can’t log the model yet, though.
 
 In order to generate spectrograms, un-commented the code for this at the bottom of loadData.py
 
+------------------------------
+Implementation
+------------------------------
+
+IOError: [Errno 2] No such file or directory: u'../birdclef_data/test/wav_16khz/LIFECLEF2014_BIRDAMAZON_XC_WAV_RN536.wav'
+------------------------------
+Changed path to test data path
+
+------------------------------
+
+  File "../preprocess/loadData.py", line 359, in processNMostCommon
+    df["OFGS"] 	= df.apply(mergeOFGS, axis=1) # merge Order, Family, Genus, Species
+
+ValueError: Wrong number of items passed 0, placement implies 1
+
+------------------------------
+Put XML file into test folder
+
+------------------------------
+
+ File "predict.py", line 113, in <module>
+    resultColumns = lb.inverse_transform(np.diag([1 for i in range(10)]))
+ValueError: output_type='binary', but y.shape = (10, 10)
+
+------------------------------
+Program is not generating all of the necessary classes. 
+
