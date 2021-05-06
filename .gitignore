@@ -5,3 +5,5 @@ FlaskApp/.DS_Storee
 figures/
 train/modelWeights/
 MLProgram/birdclef_data/
+MLProgram/predict.sh
+

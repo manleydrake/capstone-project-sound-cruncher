@@ -40,7 +40,7 @@ import loadData
 # prediction related paths, should be consistent with /preprocess/loadData.py and /train/trainModel.py
 PATH_TEST_IN_16KWAVS            = '../birdclef_data/test/wav_16khz'
 PATH_TEST_IN_XMLPICKLEFILE      = '../birdclef_data/test/xml_data.pickle'
-modelPath			= '../train/model-AlexNet.py'
+modelPath			= '../train/model-BirdClef.py'
 modelWeightsPath		= '../train/modelWeights/best_val_map_10.hdf5' 
 labelBinarizerPath 		= "../birdclef_data/labelBinarizer_top10.pickle"
 
