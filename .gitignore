@@ -3,7 +3,8 @@ CSCapstone-main/.DS_Store
 .DS_Store
 FlaskApp/.DS_Storee
 figures/
-train/modelWeights/
-MLProgram/birdclef_data/
+MLProgram/train/modelWeights/
+MLProgram/birdclef_data/TrainingSet/
+MLProgram/birdclef_data/test/
 MLProgram/predict.sh
 
