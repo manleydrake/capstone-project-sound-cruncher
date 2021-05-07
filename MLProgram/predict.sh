@@ -7,6 +7,8 @@ cd preprocess
 bash resample_wavs_to_16k.sh birdclef_data/test/demo
 cd ..
 cd predict
+rm test.csv
+touch test.csv
 python predict.py
 cd ..
 
